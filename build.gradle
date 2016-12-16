@@ -1,0 +1,20 @@
+group 'com.tobilko.web'
+version '1.0'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.13'
+  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories {
+    jcenter()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web:1.4.2.RELEASE'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:1.4.2.RELEASE'
+}
