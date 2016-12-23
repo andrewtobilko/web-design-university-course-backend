@@ -1,6 +1,7 @@
-package com.tobilko.web;
+package com.tobilko.web.parser;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.tobilko.web.entity.Feedback;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -22,7 +23,6 @@ public class FeedbackParser implements Parser<Feedback> {
         while((tmp = reader.read()) != -1) {
             jsonString = jsonString + (char)tmp;
         }
-        System.out.println(jsonString);
         ObjectMapper mapper = new ObjectMapper();
         return mapper.readValue(jsonString, Feedback.class);
     }

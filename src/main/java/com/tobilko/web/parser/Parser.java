@@ -1,4 +1,4 @@
-package com.tobilko.web;
+package com.tobilko.web.parser;
 
 import java.io.IOException;
 import java.io.Reader;
