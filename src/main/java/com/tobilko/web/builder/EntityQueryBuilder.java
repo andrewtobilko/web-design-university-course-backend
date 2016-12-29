@@ -10,26 +10,25 @@ import com.tobilko.web.builder.query.UpdateQuery;
  * Created by Andrew Tobilko on 12/28/2016.
  *
  */
-public class EntityQueryBuilder<T> implements QueryBuilder<Class<T>, T> {
+public class EntityQueryBuilder<T> implements QueryBuilder {
 
     @Override
-    public SelectQuery<T> createSelectQuery(Class<T> source) {
+    public <O, I> SelectQuery<O> createSelectQuery(I source) {
         return null;
     }
 
     @Override
-    public UpdateQuery<T> createUpdateQuery(Class<T> source) {
+    public <O, I> UpdateQuery<O> createUpdateQuery(I source) {
         return null;
     }
 
     @Override
-    public InsertQuery<T> createInsertQuery(Class<T> source) {
+    public <O, I> InsertQuery<O> createInsertQuery(I source) {
         return null;
     }
 
     @Override
-    public DeleteQuery<T> createDeleteQuery(Class<T> source) {
+    public <O, I> DeleteQuery<O> createDeleteQuery(I source) {
         return null;
     }
-
 }

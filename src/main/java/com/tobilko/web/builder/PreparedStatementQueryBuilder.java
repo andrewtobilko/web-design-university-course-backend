@@ -15,23 +15,22 @@ import java.sql.PreparedStatement;
 public class PreparedStatementQueryBuilder implements QueryBuilder<PreparedStatement, PreparedStatement> {
 
     @Override
-    public SelectQuery<PreparedStatement> createSelectQuery(PreparedStatement inputSource) {
+    public <O, I> SelectQuery<O> createSelectQuery(I source) {
         return null;
     }
 
     @Override
-    public UpdateQuery<PreparedStatement> createUpdateQuery(PreparedStatement source) {
+    public <O, I> UpdateQuery<O> createUpdateQuery(I source) {
         return null;
     }
 
     @Override
-    public InsertQuery<PreparedStatement> createInsertQuery(PreparedStatement source) {
+    public <O, I> InsertQuery<O> createInsertQuery(I source) {
         return null;
     }
 
     @Override
-    public DeleteQuery<PreparedStatement> createDeleteQuery(PreparedStatement source) {
+    public <O, I> DeleteQuery<O> createDeleteQuery(I source) {
         return null;
     }
-
 }

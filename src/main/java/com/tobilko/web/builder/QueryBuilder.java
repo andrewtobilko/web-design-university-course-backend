@@ -10,11 +10,11 @@ import com.tobilko.web.builder.query.UpdateQuery;
  * Created by Andrew Tobilko on 12/28/2016.
  *
  */
-public interface QueryBuilder<I, O> {
+public interface QueryBuilder {
 
-    SelectQuery<O> createSelectQuery(I source);
-    UpdateQuery<O> createUpdateQuery(I source);
-    InsertQuery<O> createInsertQuery(I source);
-    DeleteQuery<O> createDeleteQuery(I source);
+    <O, I> SelectQuery<O> createSelectQuery(I source);
+    <O, I> UpdateQuery<O> createUpdateQuery(I source);
+    <O, I> InsertQuery<O> createInsertQuery(I source);
+    <O, I> DeleteQuery<O> createDeleteQuery(I source);
 
 }
