@@ -9,21 +9,27 @@ public class SimpleDatabaseOptions implements DatabaseOptions {
 
     private String login;
     private String password;
-    private String databaseName;
+    private String url;
+
+    public SimpleDatabaseOptions(String url, String login, String password) {
+        this.url = url;
+        this.login = login;
+        this.password = password;
+    }
 
     @Override
     public String getLogin() {
-        return null;
+        return login;
     }
 
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @Override
-    public String getDatabaseName() {
-        return null;
+    public String getUrl() {
+        return url;
     }
 
 }

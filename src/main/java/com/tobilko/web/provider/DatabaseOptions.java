@@ -9,8 +9,6 @@ public interface DatabaseOptions {
 
     String getLogin();
     String getPassword();
-    String getDatabaseName();
-
-    // other options may be added
+    String getUrl();
 
 }
