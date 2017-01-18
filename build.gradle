@@ -22,5 +22,8 @@ dependencies {
 
             'org.hibernate:hibernate-core:5.2.4.Final',
             'org.postgresql:postgresql:9.4.1212',
-            'org.projectlombok:lombok:1.16.12'
+            'org.projectlombok:lombok:1.16.12',
+            'org.springframework:spring-test:4.3.5.RELEASE'
+
+    testCompile 'junit:junit:4.12'
 }
