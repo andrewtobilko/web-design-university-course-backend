@@ -1,5 +1,7 @@
 package com.tobilko.web.provider;
 
+import java.util.Map;
+
 import static com.tobilko.web.provider.Query.Mode.*;
 
 /**
@@ -26,12 +28,12 @@ public final class Query {
     }
 
     Mode getMode() {
-        return arguments.length == 0 ? NO_PARAMETERS : (arguments.length > 1 ? LIST : MAP);
+        return arguments.length == 0 ? NO_PARAMETERS : (arguments.length == 1 && Map.class.isAssignableFrom(arguments[0].getClass()) ? MAP : ARRAY);
     }
 
     enum Mode {
         NO_PARAMETERS,
-        LIST,
+        ARRAY,
         MAP;
     }
 

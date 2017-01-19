@@ -5,14 +5,12 @@ import com.tobilko.web.builder.query.InsertQuery;
 import com.tobilko.web.builder.query.SelectQuery;
 import com.tobilko.web.builder.query.UpdateQuery;
 
-import java.sql.PreparedStatement;
-
 /**
  *
  * Created by Andrew Tobilko on 12/28/2016.
  *
  */
-public class PreparedStatementQueryBuilder implements QueryBuilder<PreparedStatement, PreparedStatement> {
+public class PreparedStatementQueryBuilder implements QueryBuilder {
 
     @Override
     public <O, I> SelectQuery<O> createSelectQuery(I source) {

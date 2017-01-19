@@ -17,13 +17,13 @@ repositories {
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web:1.4.2.RELEASE',
             'org.springframework.boot:spring-boot-starter-tomcat:1.4.2.RELEASE',
+            'org.springframework.boot:spring-boot-starter-test:1.4.2.RELEASE',
 
             'com.fasterxml.jackson.core:jackson-core:2.8.5',
 
             'org.hibernate:hibernate-core:5.2.4.Final',
             'org.postgresql:postgresql:9.4.1212',
-            'org.projectlombok:lombok:1.16.12',
-            'org.springframework:spring-test:4.3.5.RELEASE'
+            'org.projectlombok:lombok:1.16.12'
 
-    testCompile 'junit:junit:4.12'
+    //testCompile 'junit:junit:4.12'
 }
